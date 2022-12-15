@@ -8,6 +8,7 @@ namespace Homework_1
 {
     internal class Program
     {
+        // Д/З №1 - 5 занятие
         static void Main(string[] args)
         {
             //Переменные
