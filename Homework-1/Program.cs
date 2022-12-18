@@ -18,8 +18,11 @@ namespace Homework_1
             int countCharText = 0;
             var tableWidthSize = 0;
             var tableHeightSize = 0;
+            string border = string.Empty;
 
             GetUserData();
+            //Горизонтальная граница сборка
+            HorizontalBorder(tableWidthSize);
 
             for (int i = 0; i < 3; i++)
             {
@@ -38,9 +41,6 @@ namespace Homework_1
                     case 2:
                         //3 - Строка
                         OutputThirdCell();
-                        break;
-
-                    default:
                         break;
                 }
             }
@@ -83,7 +83,7 @@ namespace Homework_1
             void OutputFirstCell()
             {
                 //Горизонтальная граница
-                horizontalBorder(tableWidthSize);
+                Console.WriteLine(border);
 
                 for (int i = 0; i < tableHeightSize-2; i++)
                 {
@@ -108,7 +108,7 @@ namespace Homework_1
             void OutputSecondCell()
             {
                 //Горизонтальная граница
-                horizontalBorder(tableWidthSize);
+                Console.WriteLine(border);
                 //Счётчик
                 var strNomber = 0;
 
@@ -142,7 +142,7 @@ namespace Homework_1
             void OutputThirdCell()
             {
                 //Горизонтальная граница
-                horizontalBorder(tableWidthSize);
+                Console.WriteLine(border);
                 var strNomber = 0;
                 
                 for (int i = 0; i < tableWidthSize - 2; i++)
@@ -159,26 +159,22 @@ namespace Homework_1
                         {
                             Console.Write("+");
                         }
-                        //else if (i == tableWidthSize - 2)
-                        //{
-                        //    Console.Write("+");
-                        //}
                         else Console.Write(" ");
                     }
                     Console.WriteLine();
                 }
                 //Нижняя горизонтальная граница
-                horizontalBorder(tableWidthSize);
+                Console.WriteLine(border);
             }
 
             //Горизонтальная граница
-            void horizontalBorder(int widthSize)
+            void HorizontalBorder(int widthSize)
             {
                 for (int i = 0; i < widthSize; i++)
                 {
-                    Console.Write("+");
+                    border += "+";
                 }
-                Console.WriteLine();
+                
             }
         }
     }
